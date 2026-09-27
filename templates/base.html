@@ -8,7 +8,12 @@
 </head>
 <body>
   <header>
-    <a href="index.html">My Blog</a>
+    <a href="index.html" class="site-title">tomasz.jedrzejczyk.blog</a>
+    <nav>
+      <a href="index.html" class="{% if active == 'blog' %}active{% endif %}">Blog</a>
+      <a href="gear.html" class="{% if active == 'gear' %}active{% endif %}">Gear</a>
+      <a href="contact.html" class="{% if active == 'contact' %}active{% endif %}">Contact</a>
+    </nav>
   </header>
   <main>
     {% block content %}{% endblock %}

@@ -63,6 +63,10 @@ def build() -> None:
         out_path = OUTPUT_DIR / f"{post.slug}.html"
         out_path.write_text(post_template.render(post=post), encoding="utf-8")
 
+    for page in ("gear.html", "contact.html"):
+        page_template = env.get_template(page)
+        (OUTPUT_DIR / page).write_text(page_template.render(), encoding="utf-8")
+
     shutil.copytree(STATIC_DIR, OUTPUT_DIR / "static")
 
     print(f"Built {len(posts)} post(s) into {OUTPUT_DIR}/")

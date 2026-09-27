@@ -7,10 +7,45 @@ body {
   color: #222;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 header a {
-  font-weight: bold;
   text-decoration: none;
   color: #222;
+}
+
+.site-title {
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+nav a {
+  color: #666;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: #222;
+}
+
+nav a.active {
+  color: #222;
+  font-weight: bold;
+  border-bottom-color: #222;
 }
 
 .post-list {

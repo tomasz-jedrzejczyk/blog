@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}My Blog{% endblock %}
+{% set active = 'blog' %}
 {% block content %}
   <ul class="post-list">
     {% for post in posts %}
